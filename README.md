@@ -1,6 +1,6 @@
 Install
 ```
-git clone git@github.com:theRadn/nvim.git ~/.config/nvim
+git clone git@github.com:theRadn/nvim.git ~/.config/
 ```
 
 Lazy.nvim install
