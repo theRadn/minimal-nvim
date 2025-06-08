@@ -1,3 +1,10 @@
+vim.wo.number = true        -- Enable absolute line numbers
+
+vim.opt.tabstop = 4        -- Number of visual spaces per TAB
+vim.opt.shiftwidth = 4     -- Number of spaces to use for each step of (auto)indent
+vim.opt.softtabstop = 4    -- Number of spaces a <Tab> counts for while editing
+vim.opt.expandtab = true    -- Use spaces instead of tabs
+
 -- Ensure lazy is in runtime path
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -15,6 +22,12 @@ require("lazy").setup({
     config = function()
       require("hop").setup()
     end
+  },
+  {
+  "folke/tokyonight.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
   }
 })
 
@@ -34,9 +47,4 @@ vim.keymap.set('', 'T', function()
   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
 end, {remap=true})
 
-vim.wo.number = true        -- Enable absolute line numbers
-
-vim.opt.tabstop = 4        -- Number of visual spaces per TAB
-vim.opt.shiftwidth = 4     -- Number of spaces to use for each step of (auto)indent
-vim.opt.softtabstop = 4    -- Number of spaces a <Tab> counts for while editing
-vim.opt.expandtab = true    -- Use spaces instead of tabs
+vim.cmd[[colorscheme tokyonight-moon]]
