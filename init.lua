@@ -24,10 +24,10 @@ require("lazy").setup({
     end
   },
   {
-  "folke/tokyonight.nvim",
-  lazy = false,
-  priority = 1000,
-  opts = {},
+    "atmosuwiryo/vim-winteriscoming",
+    config = function ()
+      vim.cmd("colorscheme WinterIsComing-dark-blue-color-theme")
+    end
   }
 })
 
@@ -47,4 +47,4 @@ vim.keymap.set('', 'T', function()
   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
 end, {remap=true})
 
-vim.cmd[[colorscheme tokyonight-moon]]
+vim.cmd("colorscheme WinterIsComing-dark-blue-color-no-italics-theme")
