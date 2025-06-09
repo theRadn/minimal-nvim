@@ -5,7 +5,7 @@ git clone git@github.com:theRadn/nvim.git ~/.config/nvim
 
 Install Windows
 ```
-git clone https://github.com/LazyVim/starter $env:LOCALAPPDATA\nvim
+git clone git@github.com:theRadn/nvim.git $env:LOCALAPPDATA\nvim
 ```
 
 Lazy.nvim install
