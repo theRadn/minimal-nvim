@@ -1,6 +1,5 @@
 {
   "hop.nvim": { "branch": "v2", "commit": "90db1b2c61b820e230599a04fedcd2679e64bd07" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
-  "tokyonight.nvim": { "branch": "main", "commit": "057ef5d260c1931f1dffd0f052c685dcd14100a3" },
   "vim-winteriscoming": { "branch": "main", "commit": "84cf33abb4eda6ba6cd2a039bb172c7d1f93380e" }
 }
