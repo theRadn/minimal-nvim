@@ -9,7 +9,6 @@ vim.keymap.set('i', '<C-H>', '<C-w>', { noremap = true })
 vim.keymap.set('n', 'j', 'gj', { noremap = true })
 vim.keymap.set('n', 'k', 'gk', { noremap = true })
 
--- Optionally do the same in visual mode
 vim.keymap.set('v', 'j', 'gj', { noremap = true })
 vim.keymap.set('v', 'k', 'gk', { noremap = true })
 
