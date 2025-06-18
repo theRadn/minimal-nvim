@@ -6,6 +6,16 @@ vim.opt.softtabstop = 4    -- Number of spaces a <Tab> counts for while editing
 vim.opt.expandtab = true    -- Use spaces instead of tabs
 vim.keymap.set('i', '<C-H>', '<C-w>', { noremap = true })
 
+vim.keymap.set('n', 'j', 'gj', { noremap = true })
+vim.keymap.set('n', 'k', 'gk', { noremap = true })
+
+-- Optionally do the same in visual mode
+vim.keymap.set('v', 'j', 'gj', { noremap = true })
+vim.keymap.set('v', 'k', 'gk', { noremap = true })
+
+--vim.g.loaded_matchparen = 1
+
+
 
 -- Ensure lazy is in runtime path
 -- Bootstrap lazy.nvim
@@ -36,12 +46,7 @@ require("lazy").setup({
       require("hop").setup()
     end
   },
-  {
-    "atmosuwiryo/vim-winteriscoming",
-    config = function ()
-      vim.cmd("colorscheme WinterIsComing-dark-blue-color-theme")
-    end
-  }
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
 })
 
 -- place this in one of your configuration file(s)
@@ -60,4 +65,4 @@ vim.keymap.set('', 'T', function()
   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
 end, {remap=true})
 
-vim.cmd("colorscheme morning")
+vim.cmd("colorscheme catppuccin-frappe")
