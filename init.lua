@@ -36,17 +36,37 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim and load plugins
 require("lazy").setup({
-  -- Plugins go here as tables
-  -- Example: Hop plugin
-  {
+    -- Plugins go here as tables
+    -- Example: Hop plugin
+    {
     "phaazon/hop.nvim",
     branch = "v2",
     config = function()
       require("hop").setup()
     end
-  },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
+    },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+    },
+    {
+    'stevearc/oil.nvim',
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {},
+    -- Optional dependencies
+    dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+    -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+    lazy = false,
+    }
 })
+
+-- oil
+require("oil").setup()
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- place this in one of your configuration file(s)
 -- local hop = require('hop')
