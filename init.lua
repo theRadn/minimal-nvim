@@ -8,9 +8,12 @@ vim.keymap.set('i', '<C-H>', '<C-w>', { noremap = true })
 
 vim.keymap.set('n', 'j', 'gj', { noremap = true })
 vim.keymap.set('n', 'k', 'gk', { noremap = true })
+vim.keymap.set('n', ';', ':')
 
 vim.keymap.set('v', 'j', 'gj', { noremap = true })
 vim.keymap.set('v', 'k', 'gk', { noremap = true })
+vim.keymap.set('v', '<C-c>', '"+y', { desc = "Copy to system clipboard" })
+
 
 --vim.g.loaded_matchparen = 1
 
