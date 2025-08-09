@@ -1,9 +1,9 @@
 *Install Linux*
 ```
-git clone git@github.com:theRadn/nvim.git ~/.config/nvim
+git clone git@github.com:theRadn/nvim.git ~/.config/minimal-nvim
 ```
 ```
-git clone https://github.com/theRadn/minimal-nvim.git ~/.config/nvim
+git clone https://github.com/theRadn/minimal-nvim.git ~/.config/minimal-nvim
 ```
 
 *Install Windows*
@@ -16,10 +16,10 @@ git clone https://github.com/theRadn/minimal-nvim.git $env:LOCALAPPDATA\nvim
 
 *Uninstall Linux*
 ```
-rm -rf ~/.config/nvim
+rm -rf ~/.config/minimal-nvim
 ```
 
-*Lazy.nvim install (deprecated)*
+.bashrc
 ```
-git clone https://github.com/folke/lazy.nvim.git ~/.local/share/nvim/lazy/lazy.nvim
+echo "alias mvim='NVIM_APPNAME="minimal-nvim" nvim'" >> ~/.bashrc
 ```
