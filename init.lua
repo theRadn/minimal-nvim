@@ -41,12 +41,21 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     -- Plugins go here as tables
     -- Example: Hop plugin
+{
     {
-    "phaazon/hop.nvim",
-    branch = "v2",
-    config = function()
-      require("hop").setup()
-    end
+  "folke/flash.nvim",
+  event = "VeryLazy",
+  ---@type Flash.Config
+  opts = {},
+  -- stylua: ignore
+  keys = {
+    { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+    { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+    { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+    { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+    { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+  },
+}
     },
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     {
@@ -69,25 +78,6 @@ require("lazy").setup({
 
 -- oil
 require("oil").setup()
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-
--- place this in one of your configuration file(s)
--- local hop = require('hop')
--- local directions = require('hop.hint').HintDirection
--- vim.keymap.set('', 'f', function()
---   hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = false })
--- end, {remap=true})
--- vim.keymap.set('', 'F', function()
---   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = false })
--- end, {remap=true})
--- vim.keymap.set('', 't', function()
---   hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
--- end, {remap=true})
--- vim.keymap.set('', 'T', function()
---   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
--- end, {remap=true})
-
-vim.api.nvim_set_keymap("n", "F", ":HopChar2<CR>", { silent = true })
-vim.api.nvim_set_keymap("n", "f", ":HopChar1<CR>", { silent = true })
+vim.keymap.set("n", "'", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 vim.cmd("colorscheme catppuccin-frappe")

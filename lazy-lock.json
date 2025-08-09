@@ -1,6 +1,6 @@
 {
   "catppuccin": { "branch": "main", "commit": "cb5665990a797b102715188e73c44c3931b3b42e" },
-  "hop.nvim": { "branch": "v2", "commit": "90db1b2c61b820e230599a04fedcd2679e64bd07" },
+  "flash.nvim": { "branch": "main", "commit": "3c942666f115e2811e959eabbdd361a025db8b63" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "mini.icons": { "branch": "main", "commit": "b8f6fa6f5a3fd0c56936252edcd691184e5aac0c" },
   "nvim-autopairs": { "branch": "master", "commit": "23320e75953ac82e559c610bec5a90d9c6dfa743" },
