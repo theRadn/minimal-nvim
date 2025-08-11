@@ -9,6 +9,8 @@ vim.opt.shiftwidth = 4     -- Number of spaces to use for each step of (auto)ind
 vim.opt.softtabstop = 4    -- Number of spaces a <Tab> counts for while editing
 vim.opt.expandtab = true    -- Use spaces instead of tabs
 vim.keymap.set('i', '<C-H>', '<C-w>', { noremap = true })
+vim.keymap.set('i', 'jj', '<Esc>')
+vim.keymap.set("i", "<C-v>", "<C-r>+", { noremap = true })
 
 -- vim.keymap.set('n', 'j', 'gj', { noremap = true })
 -- vim.keymap.set('n', 'k', 'gk', { noremap = true })
@@ -16,6 +18,7 @@ vim.keymap.set('n', '<leader>wq', ':wq<CR>')
 vim.keymap.set('n', '<leader>q', ':q<CR>')
 vim.keymap.set('n', '<leader>s', ':w<CR>')
 vim.keymap.set('n', '<leader>w', ':w<CR>')
+vim.keymap.set("n", "<C-v>", '"+p', { noremap = true })
 
 -- vim.keymap.set('v', 'j', 'gj', { noremap = true })
 -- vim.keymap.set('v', 'k', 'gk', { noremap = true })
