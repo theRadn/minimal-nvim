@@ -1,4 +1,4 @@
-vim.g.mapleader = ";"
+vim.g.mapleader = " "
 
 -- vim.wo.number = true        -- Enable absolute line numbers
 
@@ -12,13 +12,13 @@ vim.keymap.set('i', '<C-H>', '<C-w>', { noremap = true })
 vim.keymap.set('i', 'jj', '<Esc>')
 vim.keymap.set("i", "<C-v>", "<C-r>+", { noremap = true })
 
--- vim.keymap.set('n', 'j', 'gj', { noremap = true })
--- vim.keymap.set('n', 'k', 'gk', { noremap = true })
-vim.keymap.set('n', '<leader>wq', ':wq<CR>')
-vim.keymap.set('n', '<leader>q', ':q<CR>')
-vim.keymap.set('n', '<leader>s', ':w<CR>')
-vim.keymap.set('n', '<leader>w', ':w<CR>')
-vim.keymap.set("n", "<C-v>", '"+p', { noremap = true })
+vim.keymap.set('n', 'j', 'gj', { noremap = true })
+vim.keymap.set('n', 'k', 'gk', { noremap = true })
+vim.keymap.set('n', ';wq', ':wq<CR>')
+vim.keymap.set('n', ';q', ':q<CR>')
+vim.keymap.set('n', ';s', ':w<CR>')
+vim.keymap.set('n', ';w', ':w<CR>')
+-- vim.keymap.set("n", "<C-v>", '"+p', { noremap = true })
 
 -- vim.keymap.set('v', 'j', 'gj', { noremap = true })
 -- vim.keymap.set('v', 'k', 'gk', { noremap = true })
