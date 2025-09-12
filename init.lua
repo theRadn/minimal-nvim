@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 -- vim.wo.number = true        -- Enable absolute line numbers
 
 vim.opt.relativenumber = true
+vim.opt.number = true
 
 vim.opt.tabstop = 4        -- Number of visual spaces per TAB
 vim.opt.shiftwidth = 4     -- Number of spaces to use for each step of (auto)indent
